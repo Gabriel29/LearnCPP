@@ -5,7 +5,7 @@
 namespace LearnCPP {
 
 SimpleTest::SimpleTest() {
-	INIT_NAME
+	init_test_name();
 }
 
 SimpleTest::SimpleTest(std::string name) : TestCase(name) {

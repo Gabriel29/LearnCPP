@@ -3,14 +3,14 @@
 #include <string>
 #include <typeinfo>
 
-#define INIT_NAME "_name = get_className();"
-
 /* Abstract class that defines a Test Case */
 class TestCase {
 protected:
 	TestCase() = default;
 	TestCase(std::string name) : _name(name) { }
 	
+	void init_test_name() { _name = get_class_name(); }
+
 public:
 	virtual void exec() = 0;
 	const std::string& get_name() { return _name; }

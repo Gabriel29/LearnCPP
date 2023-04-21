@@ -14,8 +14,12 @@ StdLibrary::~StdLibrary() {
 }
 
 void StdLibrary::exec() {
-	std::cout << "Running StdLibrary test!\n";
+	std::cout << "Running StdLibrary test!\n\n";
+	TupleExamples();
+}
 
+void StdLibrary::TupleExamples() {
+	std::cout << "Tuple example:\n";
 	auto myTuple = std::make_tuple(51, "abc", true);
 
 	std::string myStr;
@@ -26,5 +30,6 @@ void StdLibrary::exec() {
 	std::cout << std::get<1>(myTuple) << '\n';
 	std::cout << std::get<2>(myTuple) << '\n';
 }
+
 
 }
